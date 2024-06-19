@@ -6,6 +6,7 @@ namespace PHPrivoxy\X509\DTO;
 
 abstract class AbstractNames implements NamesInterface
 {
+    private array $names;
     protected string $defaultCountry = 'XX';
     protected string $defaultState = 'Some-State';
     protected string $defaultOrganization = 'Internet Widgits Pty Ltd';
