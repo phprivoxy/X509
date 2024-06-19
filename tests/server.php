@@ -42,8 +42,8 @@ $rootKey = new PrivateKeyProperties($rootPrivateKeyFile, $privateKeyPassword, $p
 
 // If certificate directory (third argument) is null, certificate files don't be write (only generated).
 $creator = new ServerCertificateCreator($rootCertificate, $rootKey, $certificateDir);
-$str1 = $creator->createCertificate('test1.local');
-$str2 = $creator->createCertificate('test2.local');
+$obj1 = $creator->createCertificate('test1.local');
+$obj2 = $creator->createCertificate('test2.local');
 
-//print_r($str1);
-print_r($str2);
+//print_r($obj1);
+print_r($obj2);
