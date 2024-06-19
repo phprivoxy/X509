@@ -6,8 +6,6 @@ namespace PHPrivoxy\X509\DTO;
 
 class ImmutableNames extends AbstractNames
 {
-    private array $names;
-
     public function __construct(
             ?string $countryName = null,
             ?string $stateOrProvinceName = null,
