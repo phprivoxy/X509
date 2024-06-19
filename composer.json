@@ -1,0 +1,22 @@
+{
+    "name": "phprivoxy/x509",
+    "description": "Easy X.509 self-signed certificate creation (without OpenSSL).",
+    "type": "library",
+    "homepage": "https://www.phprivoxy.ru",
+    "license": "MIT",
+    "keywords": ["x509", "x-509", "ssl", "https", "pem", "crt", "key", "certificate", "certificates", "openssl", "open-ssl", "self-signed", "selfsigned", "ca", "certification", "authority"],
+    "autoload": {
+        "psr-4": {
+            "PHPrivoxy\\X509\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mikhail (Balpom)",
+            "homepage": "https://www.balpom.ru"
+        }
+    ],
+    "require": {
+        "php": ">=8.1"
+    }
+}
