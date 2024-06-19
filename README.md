@@ -9,7 +9,7 @@ This PHP package will be useful for simple self-signed SLL certificate generatio
 ### Installation
 #### Using composer (recommended)
 ```bash
-composer phprivoxy/X509
+composer phprivoxy/x509
 ```
 
 ### Manual certificate generation sample
