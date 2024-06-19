@@ -43,7 +43,7 @@ $privateKeyBits = 2048;
 $rootCert = new CertificateProperties($rootNames, $rootCertificateFile, $numberOfDays);
 $rootKey = new PrivateKeyProperties($rootPrivateKeyFile, $privateKeyPassword, $privateKeyBits);
 $rootCertCreator = new RootCertificateCreator($rootCert, $rootKey);
-$str = $rootCertCreator->getCertificate(); // It write CA certificate and it private key into it's files.
+$obj1 = $rootCertCreator->getCertificate(); // It write CA certificate and it private key into it's files.
 
 $names = new Names('RU', 'TEST', null, 'test');
 $domains = ['*.test.local', 'www.test.local', 'test.local', 'test2.local', 'test3.local']; // Multidomains certificate.
@@ -58,4 +58,4 @@ $cert = new CertificateProperties($names, $certificateFile, $numberOfDays, $dns)
 $key = new PrivateKeyProperties($privateKeyFile, $privateKeyPassword, $privateKeyBits);
 
 $certCreator = new CertificateCreator($cert, $key, $rootCert, $rootKey);
-$certCreator->getCertificate(); // It write certificate and it private key into it's files.
+$obj2 = $certCreator->getCertificate(); // It write certificate and it private key into it's files.
