@@ -1,4 +1,4 @@
-# phprivoxy/X509
+# phprivoxy/x509
 ## Simple library for self-signed X509 certificate generation.
 
 This PHP package will be useful for simple self-signed SLL certificate generation exclusively using only PHP (absolutely none OpenSSL console launches).
