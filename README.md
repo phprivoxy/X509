@@ -47,13 +47,12 @@ $certificateDir = __DIR__ . 'certificates';
 $creator = new PHPrivoxy\X509\ServerCertificateCreator($rootCertificate, $rootKey, $certificateDir);
 
 // Create files "certificates/test1.local.key" and "certificates/test1.local.crt".
-$str1 = $creator->createCertificate('test1.local');
+$obj1 = $creator->createCertificate('test1.local');
 
 // Create files "certificates/test2.local.key" and "certificates/test2.local.crt".
-$str2 = $creator->createCertificate('test2.local');
+$obj2 = $creator->createCertificate('test2.local');
 
-echo $str2; // Contains PHPrivoxy\X509\DTO\Certificate object.
-print_r($str2);
+print_r($obj2); // Contains PHPrivoxy\X509\DTO\Certificate object.
 ```
 
 Full samples you may find in "tests/create.php" and "tests/server.php" files - just run it:
