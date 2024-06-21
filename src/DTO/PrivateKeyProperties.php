@@ -25,7 +25,7 @@ class PrivateKeyProperties extends AbstractPrivateKeyProperties
         if (empty($str)) {
             $str = null;
         }
-        $this->privateKeyFile = $str;
+        $this->privateKeyFile = $this->normalizePath($str);
     }
 
     private function setPrivateKeyPassword(?string $str): void

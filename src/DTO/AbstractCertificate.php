@@ -10,6 +10,7 @@ abstract class AbstractCertificate implements CertificateInterface
     protected string $privateKey;
     protected ?string $chain;
     protected ?CertificatePropertiesInterface $properties;
+    protected ?PrivateKeyPropertiesInterface $keyProperties;
 
     public function publicKey(): string
     {
@@ -29,5 +30,10 @@ abstract class AbstractCertificate implements CertificateInterface
     public function properties(): ?CertificatePropertiesInterface
     {
         return $this->properties;
+    }
+
+    public function keyProperties(): ?PrivateKeyPropertiesInterface
+    {
+        return $this->keyProperties;
     }
 }

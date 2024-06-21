@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PHPrivoxy\X509\DTO;
 
-abstract class AbstractPrivateKeyProperties implements PrivateKeyPropertiesInterface
+abstract class AbstractPrivateKeyProperties extends AbstractProperties implements PrivateKeyPropertiesInterface
 {
     protected int $defaultPrivateKeyBits = 2048;
     protected ?string $privateKeyFile;

@@ -27,4 +27,9 @@ interface CertificateInterface
      * Returns certificate properties (if defined).
      */
     public function properties(): ?CertificatePropertiesInterface;
+
+    /*
+     * Returns certificate private key properties (if defined).
+     */
+    public function keyProperties(): ?PrivateKeyPropertiesInterface;
 }

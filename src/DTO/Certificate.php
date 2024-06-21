@@ -10,7 +10,8 @@ class Certificate extends AbstractCertificate
             string $publicKey,
             string $privateKey,
             ?string $chain,
-            ?CertificatePropertiesInterface $properties
+            ?CertificatePropertiesInterface $properties,
+            ?PrivateKeyPropertiesInterface $keyProperties
     )
     {
         // TODO: openssl_x509_verify($publicKey, $rootCertificate)
@@ -19,6 +20,7 @@ class Certificate extends AbstractCertificate
         $this->setPrivateKey($privateKey);
         $this->setChain($chain);
         $this->setProperties($properties);
+        $this->setKeyProperties($keyProperties);
     }
 
     public function setPublicKey(string $publicKey)
@@ -45,5 +47,10 @@ class Certificate extends AbstractCertificate
     public function setProperties(?CertificatePropertiesInterface $properties)
     {
         $this->properties = $properties;
+    }
+
+    public function setKeyProperties(?PrivateKeyPropertiesInterface $keyProperties)
+    {
+        $this->keyProperties = $keyProperties;
     }
 }
