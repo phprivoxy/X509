@@ -35,7 +35,7 @@ class CertificateProperties extends AbstractCertificateProperties
         if (empty($str)) {
             $str = null;
         }
-        $this->certificateFile = $str;
+        $this->certificateFile = $this->normalizePath($str);
     }
 
     private function setDays(?int $int): void
