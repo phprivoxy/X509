@@ -54,7 +54,7 @@ abstract class AbstractCertificateCreator implements CertificateCreatorInterface
                 try {
                     $publicKey = @file_get_contents($file);
                     if ($this->checkCertificate($publicKey)) {
-                        return new Certificate($publicKey, $privateKey, $this->rootCertificatePEM, $this->certificate);
+                        return new Certificate($publicKey, $privateKey, $this->rootCertificatePEM, $this->certificate, $this->key);
                     }
                 } catch (Exception $e) {// Not to do something.
                 }
@@ -97,7 +97,7 @@ abstract class AbstractCertificateCreator implements CertificateCreatorInterface
             $this->writeToFile($publicKey);
         }
 
-        return new Certificate($publicKey, $privateKey, $this->rootCertificatePEM, $this->certificate);
+        return new Certificate($publicKey, $privateKey, $this->rootCertificatePEM, $this->certificate, $this->key);
     }
 
     private function writeToFile(string $str): void
