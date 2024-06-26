@@ -66,4 +66,4 @@ php tests/server.php
 Don't forget to add your generated self-signed CA certificate (ROOT_CA.crt in this samples) in trusted certificates!
 
 ### License
-MIT License See [LICENSE.MD](LICENSE.MD)
+MIT License See [LICENSE](LICENSE)
