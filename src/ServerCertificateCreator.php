@@ -102,6 +102,9 @@ class ServerCertificateCreator implements ServerCertificateCreatorInterface
     private function sanitizeHost(string $host): string
     {
         $host = trim($host);
+        if ('www.' === substr($host, 0, 4)) {
+            $host = substr($host, 4);
+        }
         if (empty($host)) {
             throw new X509Exception('Host name must be not empty.');
         }
